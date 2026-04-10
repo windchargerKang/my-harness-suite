@@ -11,14 +11,21 @@
 ### 一键安装
 
 ```bash
-# 在你的 Claude Code 项目根目录执行
-curl -fsSL https://raw.githubusercontent.com/windchargerKang/my-harness-suite/main/install.sh | bash
+# 在你的 Claude Code 项目根目录执行（推荐，避免 curl|bash 丢失资源文件）
+curl -fsSL "https://github.com/windchargerKang/my-harness-suite/archive/refs/heads/main.tar.gz" \
+  | tar -xz && \
+bash my-harness-suite-main/install.sh --target "$(pwd)" && \
+rm -rf my-harness-suite-main
 ```
 
 或 PowerShell（Windows）：
 
 ```powershell
-irm https://raw.githubusercontent.com/windchargerKang/my-harness-suite/main/install.ps1 | iex
+# 推荐：下载仓库压缩包后执行本地脚本（避免远程脚本缺少资源文件）
+irm "https://github.com/windchargerKang/my-harness-suite/archive/refs/heads/main.zip" -OutFile harness-suite.zip
+Expand-Archive -Path harness-suite.zip -DestinationPath . -Force
+powershell -ExecutionPolicy Bypass -File .\my-harness-suite-main\install.ps1 -Target (Get-Location)
+Remove-Item -Recurse -Force .\my-harness-suite-main, .\harness-suite.zip
 ```
 
 ### 参数

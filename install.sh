@@ -35,11 +35,14 @@ log_error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 SKIP_SUPERPOWERS=false
 FORCE=false
 TARGET_DIR="${PWD}"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# 兼容 `curl ... | bash` 场景：此时 BASH_SOURCE 可能为空
+SCRIPT_SRC="${BASH_SOURCE:-$0}"
+SCRIPT_DIR="$(cd "$(dirname "${SCRIPT_SRC}")" && pwd)"
 INSTALLER_DIR="$(dirname "${SCRIPT_DIR}")"  # 解压后的父目录（压缩包所在位置）
 
-# 如果 install.sh 在子目录中运行，自动切换到父目录
-if [ "${SCRIPT_DIR}" != "${INSTALLER_DIR}" ]; then
+# 仅在脚本文件实际位于子目录时，自动切换到父目录
+# 通过 stdin 执行（curl | bash）时，SCRIPT_SRC 常为 bash，不做目录切换
+if [ -f "${SCRIPT_SRC}" ] && [ "${SCRIPT_DIR}" != "${INSTALLER_DIR}" ]; then
     TARGET_DIR="${INSTALLER_DIR}"
     cd "${TARGET_DIR}"
 fi
@@ -79,6 +82,11 @@ done
 # 前置检查
 # ============================================
 log_info "开始安装 Harness Suite..."
+
+# 资源完整性检查（避免直接 curl raw 脚本导致缺少目录）
+if [ ! -f "${SCRIPT_DIR}/setup/SKILL.md" ] || [ ! -d "${SCRIPT_DIR}/workflow" ] || [ ! -d "${SCRIPT_DIR}/review-skills" ]; then
+    log_error "安装资源不完整。请使用 README 中的 tar.gz/zip 安装方式，或在完整仓库目录中执行 install.sh"
+fi
 
 # 检查/创建 Claude Code 环境
 if [ ! -d "${TARGET_DIR}/.claude" ]; then
