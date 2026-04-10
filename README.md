@@ -11,16 +11,14 @@
 ### 一键安装
 
 ```bash
-# 先把 your-repo 替换为你的 GitHub 用户名或组织名
-# 例如: https://raw.githubusercontent.com/zhuifeng/harness-suite/main/install.sh
-curl -fsSL https://raw.githubusercontent.com/<你的用户名或组织名>/harness-suite/main/install.sh | bash
+# 在你的 Claude Code 项目根目录执行
+curl -fsSL https://raw.githubusercontent.com/windchargerKang/my-harness-suite/main/install.sh | bash
 ```
 
 或 PowerShell（Windows）：
 
 ```powershell
-# 先把 <你的用户名或组织名> 替换为实际值
-irm https://raw.githubusercontent.com/<你的用户名或组织名>/harness-suite/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/windchargerKang/my-harness-suite/main/install.ps1 | iex
 ```
 
 ### 参数

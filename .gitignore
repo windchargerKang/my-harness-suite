@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Finder metadata
+.AppleDouble
+.LSOverride
+
+# macOS volume files
+.Icon
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
