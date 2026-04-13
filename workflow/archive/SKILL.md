@@ -13,7 +13,7 @@ description: 归档完成的 change，将变更记录移入 archive 目录
 ## 使用方式
 
 ```
-/harness:archive <change-id>
+/harness-archive <change-id>
 ```
 
 ## 执行流程
@@ -86,5 +86,5 @@ openspec/changes/archive/index.md（如不存在则创建）
   - 进行中：<其他进行中的 change 数量>
   - 已归档：<归档总数>
 
-可开始新需求：/harness:propose <需求名称>
+可开始新需求：/harness-propose <需求名称>
 ```

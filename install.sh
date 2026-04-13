@@ -268,7 +268,7 @@ echo -e "${GREEN}========================================${NC}"
 echo ""
 echo "已安装的 Skills:"
 for skill in "${HARNESS_SKILLS[@]}"; do
-    echo "  - /harness:${skill#harness-}"
+    echo "  - /harness-${skill#harness-}"
 done
 echo ""
 echo "规约文件:"
@@ -278,7 +278,7 @@ echo "  - REVIEW.md"
 echo ""
 echo -e "${YELLOW}下一步:${NC}"
 echo "  1. 重启 Claude Code 会话使 commands 生效"
-echo "  2. 执行 /harness:setup 初始化项目"
+echo "  2. 执行 /harness-setup 初始化项目"
 echo ""
 
 # ============================================

@@ -13,7 +13,7 @@ description: 战略设计 + 任务分解，调用 brainstorming 生成 design.md
 ## 使用方式
 
 ```
-/harness:plan <change-id>
+/harness-plan <change-id>
 ```
 
 ## 执行流程
@@ -22,7 +22,7 @@ description: 战略设计 + 任务分解，调用 brainstorming 生成 design.md
 
 ```
 检查 openspec/changes/<change-id>/proposal.md 是否存在
-  └─ 若不存在 → 提示先执行 /harness:propose
+  └─ 若不存在 → 提示先执行 /harness-propose
 ```
 
 ### 第二步：读取需求上下文
@@ -117,7 +117,7 @@ status: planned
 - [ ] Review 通过
 
 ## 下一步
-执行 /harness:apply <change-id>
+执行 /harness-apply <change-id>
 ```
 
 ## 与 Superpowers 的关系

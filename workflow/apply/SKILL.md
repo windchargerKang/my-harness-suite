@@ -13,7 +13,7 @@ description: 执行实现，读取 tasks.md，调用 superpowers:implementing-pl
 ## 使用方式
 
 ```
-/harness:apply <change-id>
+/harness-apply <change-id>
 ```
 
 ## 执行流程
@@ -22,7 +22,7 @@ description: 执行实现，读取 tasks.md，调用 superpowers:implementing-pl
 
 ```
 检查 openspec/changes/<change-id>/tasks.md 是否存在
-  └─ 若不存在 → 提示先执行 /harness:plan
+  └─ 若不存在 → 提示先执行 /harness-plan
 ```
 
 ### 第二步：读取 OpenSpec 工件
@@ -140,7 +140,7 @@ description: 执行实现，读取 tasks.md，调用 superpowers:implementing-pl
 - 未解决风险：
 
 ## 下一步
-/harness:review <change-id> - 进行评审
+/harness-review <change-id> - 进行评审
 ```
 
 ### 第五步附：最终知识确认

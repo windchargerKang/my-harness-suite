@@ -14,16 +14,16 @@ description: 查看和管理捕获的知识库，支持添加、编辑、清理�
 ## 使用方式
 
 ```
-/harness:knowledge              查看所有知识
-/harness:knowledge add          添加新知识
-/harness:knowledge edit <id>    编辑指定知识
-/harness:knowledge clean        清理过时知识
-/harness:knowledge export       导出知识到文件
+/harness-knowledge              查看所有知识
+/harness-knowledge add          添加新知识
+/harness-knowledge edit <id>    编辑指定知识
+/harness-knowledge clean        清理过时知识
+/harness-knowledge export       导出知识到文件
 ```
 
 ---
 
-## /harness:knowledge
+## /harness-knowledge
 
 ### 查看所有知识
 
@@ -65,7 +65,7 @@ description: 查看和管理捕获的知识库，支持添加、编辑、清理�
 
 ---
 
-## /harness:knowledge add
+## /harness-knowledge add
 
 ### 添加新知识
 
@@ -111,7 +111,7 @@ description: 查看和管理捕获的知识库，支持添加、编辑、清理�
 
 ---
 
-## /harness:knowledge edit
+## /harness-knowledge edit
 
 ### 编辑知识
 
@@ -161,7 +161,7 @@ description: 查看和管理捕获的知识库，支持添加、编辑、清理�
 
 ---
 
-## /harness:knowledge clean
+## /harness-knowledge clean
 
 ### 清理过时知识
 
@@ -187,7 +187,7 @@ description: 查看和管理捕获的知识库，支持添加、编辑、清理�
 
 ---
 
-## /harness:knowledge export
+## /harness-knowledge export
 
 ### 导出知识
 

@@ -2,7 +2,7 @@
 
 ## 目录结构
 
-本目录为 `docs/` 的模板文件，在执行 `/harness:setup` 时会复制到目标项目。
+本目录为 `docs/` 的模板文件，在执行 `/harness-setup` 时会复制到目标项目。
 
 ## 各目录用途
 
@@ -20,8 +20,8 @@
 ```
 openspec/
 ├─ changes/
-│  ├─ <change-id>/        ← 每次 /harness:propose 时创建
-│  └─ archive/            ← 每次 /harness:archive 时归档
+│  ├─ <change-id>/        ← 每次 /harness-propose 时创建
+│  └─ archive/            ← 每次 /harness-archive 时归档
 └─ specs/
    └─ index.md
 ```

@@ -43,8 +43,8 @@
 
 | 命令 | 用途 |
 |------|------|
-| `/harness:propose <名称>` | 创建新需求 |
-| `/harness:plan <change-id>` | 战略设计 + 任务分解 |
-| `/harness:apply <change-id>` | 执行实现 |
-| `/harness:review <change-id>` | 并行评审 |
-| `/harness:archive <change-id>` | 归档完成变更 |
+| `/harness-propose <名称>` | 创建新需求 |
+| `/harness-plan <change-id>` | 战略设计 + 任务分解 |
+| `/harness-apply <change-id>` | 执行实现 |
+| `/harness-review <change-id>` | 并行评审 |
+| `/harness-archive <change-id>` | 归档完成变更 |

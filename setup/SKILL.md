@@ -182,8 +182,8 @@ description: 初始化 Harness 工作流，自动探索项目背景，简化用�
 ========================================
 
   下一步：
-    /harness:propose <需求名称>  开始第一个需求
-    /harness:knowledge          查看/管理知识库
+    /harness-propose <需求名称>  开始第一个需求
+    /harness-knowledge          查看/管理知识库
 
 ========================================
 ```
@@ -234,11 +234,11 @@ description: 初始化 Harness 工作流，自动探索项目背景，简化用�
 ## 命令行选项
 
 ```
-/harness:setup              交互式初始化（推荐）
-/harness:setup --auto       完全自动，使用检测结果
-/harness:setup --force      覆盖已有文件
-/harness:setup --docs-only  仅生成文档，跳过 openspec
-/harness:setup --help       显示帮助
+/harness-setup              交互式初始化（推荐）
+/harness-setup --auto       完全自动，使用检测结果
+/harness-setup --force      覆盖已有文件
+/harness-setup --docs-only  仅生成文档，跳过 openspec
+/harness-setup --help       显示帮助
 ```
 
 ---
@@ -287,6 +287,6 @@ description: 初始化 Harness 工作流，自动探索项目背景，简化用�
 
 维护方式：
 - 手动维护重要规范
-- /harness:apply 和 /harness:review 自动捕获知识
-- /harness:knowledge 管理知识条目
+- /harness-apply 和 /harness-review 自动捕获知识
+- /harness-knowledge 管理知识条目
 ```

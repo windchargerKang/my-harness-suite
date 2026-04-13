@@ -13,7 +13,7 @@ description: 并行执行多个 Review Skill，全方位检查代码变更
 ## 使用方式
 
 ```
-/harness:review <change-id>
+/harness-review <change-id>
 ```
 
 ## 执行流程

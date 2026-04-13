@@ -13,7 +13,7 @@ description: 创建新需求，生成 proposal.md 模板
 ## 使用方式
 
 ```
-/harness:propose <需求名称>
+/harness-propose <需求名称>
 ```
 
 ## 执行流程
@@ -70,9 +70,9 @@ status: draft
 ```
 需求提案已创建：openspec/changes/<change-id>/proposal.md
 
-下一步：使用 /harness:plan <change-id> 进行战略设计和任务分解
+下一步：使用 /harness-plan <change-id> 进行战略设计和任务分解
 ```
 
 ## 与 Superpowers 的关系
 
-此 skill 仅负责需求提案创建。设计阶段请使用 `/harness:plan` 调用 `superpowers:brainstorming` 进行深入探索。
+此 skill 仅负责需求提案创建。设计阶段请使用 `/harness-plan` 调用 `superpowers:brainstorming` 进行深入探索。

@@ -39,7 +39,7 @@ Remove-Item -Recurse -Force .\my-harness-suite-main, .\harness-suite.zip
 ### 安装后
 
 1. 重启 Claude Code 会话使 commands 生效
-2. 执行 `/harness:setup` 初始化项目
+2. 执行 `/harness-setup` 初始化项目
 
 ## 目录结构（源码）
 
@@ -78,7 +78,7 @@ harness-suite/
 
 ```bash
 # 在项目根目录执行
-/harness:setup
+/harness-setup
 ```
 
 这将创建完整的规约骨架，并检测安装 Superpowers。
@@ -86,13 +86,13 @@ harness-suite/
 ### 2. 创建需求
 
 ```bash
-/harness:propose 用户登录功能
+/harness-propose 用户登录功能
 ```
 
 ### 3. 战略设计
 
 ```bash
-/harness:plan user-login-20260409-01
+/harness-plan user-login-20260409-01
 ```
 
 调用 `superpowers:brainstorming` 进行深度设计探索，生成 design.md 和 tasks.md。
@@ -100,7 +100,7 @@ harness-suite/
 ### 4. 执行实现
 
 ```bash
-/harness:apply user-login-20260409-01
+/harness-apply user-login-20260409-01
 ```
 
 调用 `superpowers:implementing-plans` 按里程碑执行。
@@ -108,7 +108,7 @@ harness-suite/
 ### 5. 并行评审
 
 ```bash
-/harness:review user-login-20260409-01
+/harness-review user-login-20260409-01
 ```
 
 并行执行多个 Review Skill：
@@ -120,7 +120,7 @@ harness-suite/
 ### 6. 归档
 
 ```bash
-/harness:archive user-login-20260409-01
+/harness-archive user-login-20260409-01
 ```
 
 归档到 `openspec/changes/archive/`。
@@ -128,10 +128,10 @@ harness-suite/
 ### 7. 知识管理
 
 ```bash
-/harness:knowledge              查看所有知识
-/harness:knowledge add          添加新知识
-/harness:knowledge edit <id>    编辑知识
-/harness:knowledge clean        清理过时知识
+/harness-knowledge              查看所有知识
+/harness-knowledge add          添加新知识
+/harness-knowledge edit <id>    编辑知识
+/harness-knowledge clean        清理过时知识
 ```
 
 在 **apply** 和 **review** 阶段会自动捕获隐性知识，也支持手动添加。
