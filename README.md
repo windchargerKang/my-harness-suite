@@ -30,11 +30,13 @@ Remove-Item -Recurse -Force .\my-harness-suite-main, .\harness-suite.zip
 
 ### 参数
 
-| 参数 | 说明 |
-|------|------|
+
+| 参数                   | 说明                  |
+| -------------------- | ------------------- |
 | `--skip-superpowers` | 跳过 superpowers 安装检查 |
-| `--force` | 强制覆盖已有文件 |
-| `--target <path>` | 指定安装目标目录 |
+| `--force`            | 强制覆盖已有文件            |
+| `--target <path>`    | 指定安装目标目录            |
+
 
 ### 安装后
 
@@ -112,6 +114,7 @@ harness-suite/
 ```
 
 并行执行多个 Review Skill：
+
 - `superpowers:receive-code-review`
 - `prepare-review`
 - `spring-architecture-review`
@@ -138,13 +141,15 @@ harness-suite/
 
 ## 与 Superpowers 的关系
 
-| 阶段 | 调用 | 作用 |
-|------|------|------|
-| 设计 | `superpowers:brainstorming` | 深度探索、权衡分析 |
-| 执行 | `superpowers:implementing-plans` | 计划执行、里程碑管理 |
-| 验证 | `superpowers:verification-before-completion` | 里程碑检查 |
-| 评审 | `superpowers:receive-code-review` | 代码质量审查 |
-| 提交 | `superpowers:requesting-code-review` | 最终检查 |
+
+| 阶段  | 调用                                           | 作用         |
+| --- | -------------------------------------------- | ---------- |
+| 设计  | `superpowers:brainstorming`                  | 深度探索、权衡分析  |
+| 执行  | `superpowers:implementing-plans`             | 计划执行、里程碑管理 |
+| 验证  | `superpowers:verification-before-completion` | 里程碑检查      |
+| 评审  | `superpowers:receive-code-review`            | 代码质量审查     |
+| 提交  | `superpowers:requesting-code-review`         | 最终检查       |
+
 
 ## 核心规约
 
