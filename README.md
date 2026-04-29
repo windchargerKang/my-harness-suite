@@ -10,22 +10,18 @@
 
 ### 一键安装
 
+如果你的仓库在私域 Git 上，推荐直接用 `git clone` 拉取仓库后执行本地安装脚本，这样不会遇到 `archive` 下载到 HTML 页而报错的问题。
+
 ```bash
-# 在你的 Claude Code 项目根目录执行（推荐，避免 curl|bash 丢失资源文件）
-curl -fsSL "https://github.com/windchargerKang/my-harness-suite/archive/refs/heads/main.tar.gz" \
-  | tar -xz && \
-bash my-harness-suite-main/install.sh --target "$(pwd)" && \
-rm -rf my-harness-suite-main
+git clone --branch main --depth 1 "http://117.159.24.209:30381/root/my-harness-suite" ".harness-suite-tmp" && bash ".harness-suite-tmp/install.sh" --target "$(pwd)" && rm -rf ".harness-suite-tmp"
 ```
+
+如果你的私域 Git 需要登录或 Token，把仓库地址替换成你自己的可访问地址即可。
 
 或 PowerShell（Windows）：
 
 ```powershell
-# 推荐：下载仓库压缩包后执行本地脚本（避免远程脚本缺少资源文件）
-irm "https://github.com/windchargerKang/my-harness-suite/archive/refs/heads/main.zip" -OutFile harness-suite.zip
-Expand-Archive -Path harness-suite.zip -DestinationPath . -Force
-powershell -ExecutionPolicy Bypass -File .\my-harness-suite-main\install.ps1 -Target (Get-Location)
-Remove-Item -Recurse -Force .\my-harness-suite-main, .\harness-suite.zip
+git clone --branch main --depth 1 "http://117.159.24.209:30381/root/my-harness-suite" ".harness-suite-tmp"; powershell -ExecutionPolicy Bypass -File ".harness-suite-tmp\install.ps1" -Target (Get-Location); Remove-Item -Recurse -Force ".harness-suite-tmp"
 ```
 
 ### 参数
