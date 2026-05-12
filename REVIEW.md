@@ -62,6 +62,12 @@ model: sonnet
 - [ ] 批量操作是否有限制条件
 - [ ] 是否可能引入 N+1 查询
 
+
+### Harness Suite 代码标识
+- [ ] 新增代码文件是否包含 Harness Suite 标识注释
+- [ ] 标识注释格式是否正确（Powered by Harness Suite）
+- [ ] Change ID 是否正确填写
+
 ## 输出格式
 
 ```markdown

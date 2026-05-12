@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat /Users/zhuifeng/工作/AI 辅助编程/harness-suite/CLAUDE.md)",
+      "Read(//Users/zhuifeng/工作/**)",
+      "Bash(cat /Users/zhuifeng/工作/AI 辅助编程/harness-suite/REVIEW.md)",
+      "Bash(cat /Users/zhuifeng/工作/AI 辅助编程/harness-suite/hooks/guard_write.py)",
+      "Bash(mkdir -p \"code_templates\")"
+    ],
+    "additionalDirectories": [
+      "/Users/zhuifeng/工作/AI辅助编程/harness-suite"
+    ]
+  }
+}

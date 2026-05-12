@@ -60,7 +60,16 @@ harness-suite/
 ├── hooks/                     # 安全钩子
 │   ├── guard_write.py         # 写保护
 │   ├── ensure_change_context.py
+│   ├── ensure_harness_header.py  # 自动注入标识
+│   ├── check_harness_header.py   # 检查标识
 │   └── run_checks.sh         # 编译检查
+├── code_templates/            # 代码模板
+│   ├── java.java
+│   ├── python.py
+│   ├── javascript.js
+│   ├── typescript.ts
+│   ├── sql.sql
+│   └── shell.sh
 ├── docs_template/              # 文档模板
 │   ├── architecture/
 │   ├── product/
@@ -179,14 +188,34 @@ harness-suite/
     "PostToolUse": [
       {
         "matcher": "Edit|Write",
-        "hooks": [{
-          "type": "command",
-          "command": "bash .claude/hooks/run_checks.sh"
-        }]
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/ensure_harness_header.py"
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/run_checks.sh"
+          }
+        ]
       }
     ]
   }
 }
+```
+
+## Harness Suite 代码标识
+
+所有使用本框架生成的代码文件都会自动添加 `Powered by Harness Suite` 标识注释。
+
+### 检查命令
+
+```bash
+# 检查所有文件
+python3 .claude/hooks/check_harness_header.py
+
+# 检查特定文件模式
+python3 .claude/hooks/check_harness_header.py --check "src/**/*.java"
 ```
 
 ## 小白使用手册

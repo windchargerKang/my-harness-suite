@@ -196,6 +196,7 @@ if [ -f "${SCRIPT_DIR}/agents/reviewer.md" ]; then
     log_success "复制 reviewer agent"
 fi
 
+# 复制核心 hooks
 for hook in guard_write.py ensure_change_context.py run_checks.sh; do
     src="${SCRIPT_DIR}/hooks/${hook}"
     if [ -f "$src" ]; then
@@ -204,6 +205,22 @@ for hook in guard_write.py ensure_change_context.py run_checks.sh; do
         log_success "复制 $hook"
     fi
 done
+
+# 复制 Harness Suite 标识相关 hooks
+for hook in ensure_harness_header.py check_harness_header.py; do
+    src="${SCRIPT_DIR}/hooks/${hook}"
+    if [ -f "$src" ]; then
+        cp "$src" "${TARGET_DIR}/.claude/hooks/${hook}"
+        chmod +x "${TARGET_DIR}/.claude/hooks/${hook}"
+        log_success "复制 $hook"
+    fi
+done
+
+# 复制代码模板目录
+if [ -d "${SCRIPT_DIR}/code_templates" ]; then
+    cp -r "${SCRIPT_DIR}/code_templates" "${TARGET_DIR}/.claude/"
+    log_success "复制 code_templates"
+fi
 
 # ============================================
 # Step 5: 复制规约文件
