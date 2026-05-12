@@ -13,7 +13,7 @@
 如果你的仓库在私域 Git 上，推荐直接用 `git clone` 拉取仓库后执行本地安装脚本，这样不会遇到 `archive` 下载到 HTML 页而报错的问题。
 
 ```bash
-git clone --branch main --depth 1 "http://117.159.24.209:30381/root/my-harness-suite" ".harness-suite-tmp" && bash ".harness-suite-tmp/install.sh" --target "$(pwd)" && rm -rf ".harness-suite-tmp"
+git clone --branch main --depth 1 "https://github.com/windchargerKang/my-harness-suite" ".harness-suite-tmp" && bash ".harness-suite-tmp/install.sh" --target "$(pwd)" && rm -rf ".harness-suite-tmp"
 ```
 
 如果你的私域 Git 需要登录或 Token，把仓库地址替换成你自己的可访问地址即可。
@@ -21,7 +21,7 @@ git clone --branch main --depth 1 "http://117.159.24.209:30381/root/my-harness-s
 或 PowerShell（Windows）：
 
 ```powershell
-git clone --branch main --depth 1 "http://117.159.24.209:30381/root/my-harness-suite" ".harness-suite-tmp"; powershell -ExecutionPolicy Bypass -File ".harness-suite-tmp\install.ps1" -Target (Get-Location); Remove-Item -Recurse -Force ".harness-suite-tmp"
+git clone --branch main --depth 1 "https://github.com/windchargerKang/my-harness-suite" ".harness-suite-tmp"; powershell -ExecutionPolicy Bypass -File ".harness-suite-tmp\install.ps1" -Target (Get-Location); Remove-Item -Recurse -Force ".harness-suite-tmp"
 ```
 
 ### 参数
