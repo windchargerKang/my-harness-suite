@@ -5,7 +5,6 @@
 | 文件 | 用途 | 版本控制 |
 |------|------|---------|
 | `settings.json` | 主配置（commands、hooks） | ✅ 提交到 git |
-| `settings.local.json` | 本地覆盖（权限、路径） | ❌ 忽略 |
 
 ## 完整配置示例
 
@@ -84,10 +83,3 @@
    ls -la .claude/code_templates/
    ```
 
-## .gitignore 配置
-
-确保 `.gitignore` 包含：
-
-```
-.claude/settings.local.json
-```
